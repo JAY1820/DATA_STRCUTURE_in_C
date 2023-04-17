@@ -1,13 +1,16 @@
 #include "char_stack.h"
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int main()
+{
     char_stack main, aux;
     initCharStack(&main,100);
     initCharStack(&aux,100);
     char str[100];
     printf("Enter the string: ");
     scanf("%s", str);
+    
     int n = strlen(str);
     for(int i=0; i<n; i++){
         if(i==0){
