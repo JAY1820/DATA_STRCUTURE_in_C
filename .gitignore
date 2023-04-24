@@ -2,6 +2,7 @@
 *.class
 *.png
 Assigement/*.png
+Ds Lab/*.exe
 Assigement/*.exe
 1)Submission/*.zip
 .vscode
