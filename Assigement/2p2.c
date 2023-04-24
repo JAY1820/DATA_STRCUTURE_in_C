@@ -2,38 +2,15 @@
 #include <stdlib.h>
 #include "linklistint.h"
 
-void deletenode(struct node *del)
-{
-    struct node *temp = head;
-    if (head == del)
-    {
-        head = del->next;
-    }
-    else
-    {
-        while (temp->next != del)
-        {
-            temp = temp->next;
-        }
-        temp->next = del->next;
-    }
-    free(del);
-}
 
-void removeDuplicates()
-{
+void removeDuplicates() {
     struct node *current = head;
-    while (current != NULL)
-    {
+    while (current != NULL) {
         struct node *temp = current;
-        while (temp->next != NULL)
-        {
-            if (temp->next->data == current->data)
-            {
+        while (temp->next != NULL) {
+            if (temp->next->data == current->data) {
                 deletenode(temp->next);
-            }
-            else
-            {
+            } else {
                 temp = temp->next;
             }
         }
@@ -41,8 +18,7 @@ void removeDuplicates()
     }
 }
 
-int main()
-{
+int main() {
     insertEnd(1);
     insertEnd(2);
     insertEnd(3);

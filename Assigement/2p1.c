@@ -10,8 +10,9 @@ void Subsets(struct node *head,int no) {
         temp = head;
         printf("{");
         for (int j = 0; j < no; j++) 
-        {
-            if (i & (1 << j)) {
+        { 
+              // 0/ 2^0 % 2 = 0/ 1%2 = ans is 1 so condtion true and print data
+             if ((i / (int)pow(2,j)) % 2 == 1) {
                 printf("%d ", temp->data);
             }
             
@@ -37,6 +38,7 @@ int main() {
         insertEnd(data);
     }
     display();
+
     printf("Set: ");
     display();
     

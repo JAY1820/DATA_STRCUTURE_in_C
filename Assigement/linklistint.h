@@ -68,37 +68,23 @@ void insertSpecific(int pos, int data) {
     temp->next = newnode;
 }
 
-void deletefirst() {
-    if (head == NULL) {
-        printf("List is empty\n");
-        return;
-    }
-    
-    temp = head;
-    
-    head = temp->next;
-    
-    free(temp);
-}
 
 
-void deletespecific(int pos)
-{
-    int count=1;
-    if(pos==1)
-    {
-        deletefirst();
-    }
-    else{
-        temp=head;
-        while(temp->next!=NULL && count!=pos)
-        {
-            count++;
-            temp=temp->next;
+
+
+void deletenode(struct node *del) {
+    struct node *temp = head;
+    if (head == del) {
+        head = del->next;
+    } else {
+        while (temp->next != del) {
+            temp = temp->next;
         }
-            temp->next=temp->next->next;
+        temp->next = del->next;
     }
+    free(del);
 }
+
 
 void display() {
     if (head == NULL) {
