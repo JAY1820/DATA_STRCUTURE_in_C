@@ -1,9 +1,10 @@
-1)Submission
-
 *.exe
-
 *.class
-
 *.png
+Assigement/*.png
+Assigement/*.exe
+1)Submission/*.zip
+.vscode
+
 
 
