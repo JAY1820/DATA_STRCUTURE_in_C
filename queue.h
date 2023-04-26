@@ -48,3 +48,9 @@ void display(int *q,int *front,int *rear){
     }
     printf("\n");
 }
+
+
+int isEmpty()
+{
+    return front == NULL;
+}
