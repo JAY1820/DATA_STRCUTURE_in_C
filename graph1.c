@@ -75,7 +75,7 @@ void BFS(int A[][8], int start, int n)
 
 void DFS(int A[][8],int start,int n)
 {
-    static int visited[8]={0};
+    static int visited[]={0};
     int v;
     int i=start;
     
