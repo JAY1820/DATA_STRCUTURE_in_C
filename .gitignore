@@ -1,9 +1,11 @@
 *.exe
 *.class
 *.png
-Assigement/*.png
-Ds Lab/*.exe
-Assigement/*.exe
+*.exe
+
+Assigement program/*.png
+1)Submission/TERMWORK/*.png
+Ds Lab/*.exeAssigement/*.exe
 1)Submission/*.zip
 
 
