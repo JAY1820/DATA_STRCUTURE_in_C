@@ -103,19 +103,6 @@ void addEdge(struct Graph* graph, int src, int dest, int weight) {
     }
 }
 
-void generateAdjList(FILE *fp) {
-    int u, v, w;
-    struct Graph* graph = createGraph(n);
-    for (int i = 0; i < m; i++) {
-        if (isWeighted) {
-            fscanf(fp, "%d %d %d", &u, &v, &w);
-        } else {
-            fscanf(fp, "%d %d", &u, &v);
-        }
-        addEdge(graph, u, v, w);
-    }
-    printAdjList(graph);
-}
 
 void printAdjList(struct Graph* graph) {
     printf("\nAdjacency List:\n");
@@ -128,6 +115,20 @@ void printAdjList(struct Graph* graph) {
         }
         printf("\n");
     }
+}
+
+void generateAdjList(FILE *fp) {
+    int u, v, w;
+    struct Graph* graph = createGraph(n);
+    for (int i = 0; i < m; i++) {
+        if (isWeighted) {
+            fscanf(fp, "%d %d %d", &u, &v, &w);
+        } else {
+            fscanf(fp, "%d %d", &u, &v);
+        }
+        addEdge(graph, u, v, w);
+    }
+    printAdjList(graph);
 }
 
 int main() {

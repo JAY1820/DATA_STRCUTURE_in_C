@@ -83,7 +83,6 @@ void deletefirst()
         free(temp);
     }
 }
-
 void deleteend()
 {
    struct node *previous;   
@@ -103,7 +102,6 @@ void deleteend()
     free(temp);
     }
 }
-
 void deletespecific(int pos)
 {
     int count=1;
